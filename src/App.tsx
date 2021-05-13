@@ -1,7 +1,10 @@
+import GlobalStyle from "./style/globalStyle";
+
 function App() {
   return (
     <>
-    we are passionfruit
+      <GlobalStyle />
+      we are passionfruit
     </>
   );
 }
