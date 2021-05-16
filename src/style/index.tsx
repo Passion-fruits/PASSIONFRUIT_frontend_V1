@@ -1,9 +1,9 @@
-export const MAIN_COLOR = "#0090FF";
+export const COLOR = {
+    MAIN_COLOR : "#0090FF",
+    BACKGROUND_COLOR : "#191919",
+    FONT_COLOR : "#A2A2A2",
+    YELLOW : "#FFEE00",
+    ORANGE : "#FF8000"
+}
 
-export const BACKGROUND_COLOR = "#191919";
-
-export const FONT_COLOR = "#A2A2A2";
-
-export const YELLOW_COLOR = "#FFEE00";
-
-export const ORANGE_COLOR = "#FF8000";
+export const PADDING = "200px";
