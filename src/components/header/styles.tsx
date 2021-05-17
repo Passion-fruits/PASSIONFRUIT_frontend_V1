@@ -14,11 +14,14 @@ export const Container = styled.div`
   padding-top: 25px;
   display: flex;
   align-items: center;
+  :first-of-type {
+    justify-content: space-between;
+  }
   .active {
     /* border-bottom: 2px solid white; */
-    ::before{
-      left:0%;
-  }
+    ::before {
+      left: 0%;
+    }
   }
 `;
 
@@ -44,48 +47,84 @@ export const SearchBar = styled.div`
   display: flex;
   align-items: center;
   i {
-    color: gray;
+    color: rgb(170, 170, 170);
     font-size: 13px;
   }
 `;
 
 export const SearchInput = styled.input`
-  font-size: 12px;
+  font-size: 13px;
   width: 100%;
   height: 100%;
   background-color: transparent;
   border: none;
-  color: gray;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  ::placeholder {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(170, 170, 170);
+  }
   margin-left: 10px;
 `;
 
 export const Menu = styled(NavLink)`
   color: white;
   font-size: 13px;
-  padding-bottom: 15px;
+  padding: 15px 0;
   margin-left: 70px;
-  position:relative;
-  overflow:hidden;
+  position: relative;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
   &:first-of-type {
     margin: 0;
   }
   i {
+    font-size: 13px;
     color: ${COLOR.YELLOW};
     margin-left: 5px;
   }
-  ::before{
-      content:"";
-      color:blue;
-      width:100%;
-      height:15px;
-      position:absolute;
-      left:0%;
-      transition:0.5s;
-      bottom:0;
-      border-bottom:2px solid white;
-      left:-100%
+  ::before {
+    content: "";
+    color: blue;
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    left: 0%;
+    transition: 0.5s;
+    bottom: 0;
+    border-bottom: 2px solid white;
+    left: -100%;
   }
-  :hover::before{
-      left:0%;
+  :hover::before {
+    left: 0%;
   }
 `;
+
+export const AuthContainer = styled.div`
+  display: flex;
+  float: right;
+`;
+
+export const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const SignBtn = styled.button`
+background-color:rgb(255,255,255,0.2);
+border:none;
+padding: 5px 13px;
+border-radius:24px;
+font-weight:bold;
+font-size:13px;
+transition:0.3s;
+:first-of-type{
+    background-color:${COLOR.YELLOW};
+    color:black;
+    margin-right:10px;
+}
+:hover{
+    opacity:0.8;
+}
+`
