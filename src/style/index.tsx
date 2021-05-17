@@ -6,4 +6,8 @@ export const COLOR = {
     ORANGE : "#FF8000"
 }
 
-export const PADDING = "200px";
+export const WIDTH = "1450px";
+
+export const TABLET_WIDTH = "1024px";
+
+export const PHONE_WIDTH = "768px";
