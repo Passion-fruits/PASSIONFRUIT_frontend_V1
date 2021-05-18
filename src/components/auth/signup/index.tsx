@@ -1,4 +1,5 @@
 import * as s from "../styles";
+import ProfileImg from "./profileImg";
 
 export default function SignUp() {
   return (
@@ -8,10 +9,8 @@ export default function SignUp() {
         <s.SubTitle>Welcome to sign up with Passion Fruit.</s.SubTitle>
         <s.SignUpContainer>
           <s.FlexContainer>
-            <s.AddImg>
-              <s.Square />
-              <s.Square />
-            </s.AddImg>
+            { /* 프로필 이미지 추가 컴포넌트 */ }
+            <ProfileImg/>
             <s.InpWrapper>
               <s.Input placeholder="Enter your E-mail" type="email" />
               <s.Input
