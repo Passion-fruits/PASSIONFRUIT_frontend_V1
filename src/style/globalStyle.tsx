@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import { INP_COLOR } from ".";
+import { INP_COLOR } from "./index";
 
 const GlobalStyle = createGlobalStyle`
     ${reset};
