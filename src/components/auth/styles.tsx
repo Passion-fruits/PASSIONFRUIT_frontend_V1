@@ -93,6 +93,15 @@ export const AddImg = styled.div`
   }
 `;
 
+export const ProfileImg = styled.img`
+  width: 180px;
+  height: 180px;
+  border-radius: 80%;
+  cursor: pointer;
+  object-fit:cover;
+  border:2px solid rgb(25,25,25);
+`;
+
 export const FlexContainer = styled.div`
   display: flex;
   justify-content: space-between;
