@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLOR, WIDTH } from "../../style";
+import { COLOR, INP_COLOR, WIDTH } from "../../style";
 import { NavLink } from "react-router-dom";
 
 export const Wrapper = styled.header`
@@ -47,7 +47,7 @@ export const SearchBar = styled.div`
   display: flex;
   align-items: center;
   i {
-    color: rgb(170, 170, 170);
+    color: ${INP_COLOR};
     font-size: 13px;
   }
 `;
@@ -58,11 +58,10 @@ export const SearchInput = styled.input`
   height: 100%;
   background-color: transparent;
   border: none;
-
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   ::placeholder {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(170, 170, 170);
+    color: ${INP_COLOR};
   }
   margin-left: 10px;
 `;

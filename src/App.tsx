@@ -1,17 +1,21 @@
 import { Route, Switch } from "react-router";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import SignIn from "./components/auth/signin";
+import SignUp from "./components/auth/signup";
 import Header from "./components/header";
 import GlobalStyle from "./style/globalStyle";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <Router>
         <GlobalStyle />
+        <Header></Header>
         <Switch>
-          <Route path="/" component={Header} />
+          <Route exact path="/signin" component={SignIn} />
+          <Route exact path="/signup" component={SignUp} />
         </Switch>
-      </BrowserRouter>
+      </Router>
     </>
   );
 }

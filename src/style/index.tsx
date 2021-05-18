@@ -11,3 +11,5 @@ export const WIDTH = "1450px";
 export const TABLET_WIDTH = "1024px";
 
 export const PHONE_WIDTH = "768px";
+
+export const INP_COLOR = "rgb(170, 170, 170)";

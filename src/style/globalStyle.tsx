@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import { INP_COLOR } from ".";
 
 const GlobalStyle = createGlobalStyle`
     ${reset};
@@ -24,6 +25,16 @@ const GlobalStyle = createGlobalStyle`
     ul{
         list-style:none;
     }
+    input:-webkit-autofill { 
+        box-shadow: 0 0 0 30px transparent inset ; 
+        -webkit-text-fill-color: ${INP_COLOR}; 
+        } 
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active { 
+            transition: background-color 5000s ease-in-out 0s; 
+        }
 `;
 
 export default GlobalStyle;
