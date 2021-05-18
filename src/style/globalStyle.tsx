@@ -4,6 +4,9 @@ import { INP_COLOR } from "./index";
 
 const GlobalStyle = createGlobalStyle`
     ${reset};
+    html{
+        scroll-behavior: smooth;
+    }
     body{
         background-color:black;
     }
