@@ -1,5 +1,5 @@
 import * as s from "../styles";
-import ProfileImg from "./profileImg";
+import ProfileImg from "../../public/uploadProfile/profileImg";
 
 export default function SignUp() {
   return (

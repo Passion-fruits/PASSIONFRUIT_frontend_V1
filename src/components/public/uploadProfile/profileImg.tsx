@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import * as s from "../styles";
+import * as s from "./styles";
 
 export default function ProfileImg() {
   const [ImgSrc, setImgSrc] = useState<string>("");

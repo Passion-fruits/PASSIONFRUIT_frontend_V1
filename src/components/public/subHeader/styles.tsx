@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { WIDTH } from '../../style'
+import { WIDTH } from '../../../style'
 
 export const FullWrapper = styled.div`
 width:100%;
