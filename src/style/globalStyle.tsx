@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     }
     body{
         background-color:black;
+        padding-top:90px;
     }
     *{
         -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
