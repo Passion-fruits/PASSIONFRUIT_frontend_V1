@@ -4,17 +4,32 @@ import { COLOR } from "../../../style";
 export const CardWrapper = styled.div`
     width: 258px;
     height: 370px;
-    border-radius: 6px;
+    border-radius: 10px;
     background: ${COLOR.BACKGROUND_COLOR};
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+`;
+
+export const CardImgWrapper = styled.div`
+    width: 218px;
+    height: 218px;
+    position: relative;
 `;
 
 export const CardImg = styled.img`
-    width: 218px;
-    height: 218px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 
-    &:hover {
+    & ~ button {
+        display: none;
+    }
+
+    &:hover ~ button {
+        display: flex;
     }
 `;
 
