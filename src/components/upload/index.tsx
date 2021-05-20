@@ -27,8 +27,16 @@ export default function Upload() {
           </s.InforWrapper>
           <s.InforWrapper>
             <s.InforTitle>Music selection</s.InforTitle>
-            <s.SoundCloudBox><i className="fab fa-soundcloud"></i> SoundCloud</s.SoundCloudBox>
+            <s.SoundCloudBox>MUSIC UPLOAD</s.SoundCloudBox>
           </s.InforWrapper>
+          <s.InforWrapper>
+            <s.InforTitle>Highlight cut</s.InforTitle>
+          </s.InforWrapper>
+          <s.AlertSpan>
+            ( All listening is uploaded to streaming, and highlights are
+            uploaded to feed. )
+          </s.AlertSpan>
+          <s.SubmitBtn>UPLOAD</s.SubmitBtn>
         </s.InpContainer>
       </s.Container>
     </s.Wrapper>
