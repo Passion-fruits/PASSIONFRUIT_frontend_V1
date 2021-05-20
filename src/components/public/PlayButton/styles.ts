@@ -10,4 +10,12 @@ export const PlayButton = styled.button`
     align-items: center;
     justify-content: center;
     background: #008ffe;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:hover {
+        display: flex;
+    }
 `;
