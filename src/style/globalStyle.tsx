@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
         -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         color:white;
+        box-sizing: border-box;
     }
     a{
         text-decoration:none;
