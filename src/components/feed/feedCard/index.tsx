@@ -17,7 +17,7 @@ export default function FeedCard(){
                         <s.Genre>HIPHOP</s.Genre>
                     </s.TitleWrapper>
                     <s.Date>2020-05-12</s.Date>
-                    <s.MusicDescription>it's my first rap song!!</s.MusicDescription>
+                    <s.MusicDescription>it's my first rap song!!it's my first rap song!!</s.MusicDescription>
                     <s.PlayBarContainer>
                         <s.PlayBtn><i className="fas fa-play"/></s.PlayBtn>
                         <progress value="0"/>   

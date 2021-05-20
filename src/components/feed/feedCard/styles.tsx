@@ -39,8 +39,8 @@ export const FlexContainer = styled.div`
 `;
 
 export const CoverImg = styled.img`
-  width: 180px;
-  height: 180px;
+  width: 190px;
+  height: 190px;
   object-fit: cover;
 `;
 
@@ -51,6 +51,7 @@ export const MusicInforContainer = styled.div`
   padding-left: 15px;
   box-sizing: border-box;
   position:relative;
+  height:200px;
 `;
 
 export const TitleWrapper = styled.div`
@@ -79,6 +80,7 @@ export const MusicDescription = styled.p`
   font-size: 15px;
   color: white;
   margin-top: 17px;
+  line-height:19px;
 `;
 
 export const PlayBarContainer = styled.div`

@@ -116,7 +116,7 @@ export const FlexContainer = styled.div`
 `;
 
 export const SignBtn = styled.button`
-background-color:rgb(255,255,255,0.2);
+background-color:${COLOR.BACKGROUND_COLOR};
 border:none;
 padding: 5px 13px;
 border-radius:24px;
