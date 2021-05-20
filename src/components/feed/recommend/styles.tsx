@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   width: 170px;
   position: sticky;
   top: 0px;
-`;
+`
 
 export const Title = styled.span`
   color: white;
