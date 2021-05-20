@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 80px;
 `;
 
 export const Container = styled.div`
@@ -13,11 +12,17 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   height: 30px;
-  position:relative;
+  position: fixed;
+  height: 100%;
 `;
 
 export const FeedWrapper = styled.div`
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   width: 60%;
+  height: 100%;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;

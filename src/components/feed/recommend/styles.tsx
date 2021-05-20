@@ -5,8 +5,7 @@ display: flex;
 flex-direction:column;
 align-items:flex-end;
 width:200px;
-position:sticky;
-top:0px;
+margin-top:80px;
 `
 
 export const Title = styled.span`
