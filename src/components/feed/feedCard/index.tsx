@@ -1,19 +1,17 @@
 import * as s from './styles'
-import Profile from '../../../assets/eminem.jpg'
-import Cover from '../../../assets/cover.jpeg'
 
-export default function FeedCard(){
+export default function FeedCard({name,title,profile,cover} : any){
     return(
         <s.Wrapper>
             <s.ProfileContainer>
-                <s.ProfileImg src={Profile} alt=""/>
-                <s.ProfileName>eminem</s.ProfileName>
+                <s.ProfileImg src={profile} alt=""/>
+                <s.ProfileName>{name}</s.ProfileName>
             </s.ProfileContainer>
             <s.FlexContainer>
-                <s.CoverImg src={Cover} alt=""/>
+                <s.CoverImg src={cover} alt=""/>
                 <s.MusicInforContainer>
                     <s.TitleWrapper>
-                        Godzila
+                        {title}
                         <s.Genre>HIPHOP</s.Genre>
                     </s.TitleWrapper>
                     <s.Date>2020-05-12</s.Date>
