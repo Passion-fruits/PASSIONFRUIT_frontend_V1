@@ -33,9 +33,9 @@ export const Logo = styled.span`
   font-size: 28px;
   font-family: Freestyle Script;
   b {
-    color: #c25892;
+    color: red;
     &:last-of-type {
-      color: #5e4eca;
+      color: ${COLOR.MAIN_COLOR};
     }
   }
 `;
