@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   border-bottom:1px solid rgb(70,70,70);
   padding-bottom:30px;
   :first-of-type{
-      margin-top:80px ;
+      margin-top:0px ;
   }
   :last-of-type{
     margin-bottom:100px;

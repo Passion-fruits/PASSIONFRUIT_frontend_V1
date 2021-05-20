@@ -6,8 +6,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-end;
   width: 170px;
-  position: sticky;
-  top: 0px;
+  position:fixed;
 `
 
 export const Title = styled.span`

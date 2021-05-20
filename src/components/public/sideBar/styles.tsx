@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { COLOR } from "../../../style";
 
 export const Wrapper = styled.div`
-  width: 15%;
+  width: 13%;
+  position:fixed;
 `;
 
 export const SelectTitle = styled.label`
