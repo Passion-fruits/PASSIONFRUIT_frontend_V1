@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { COLOR } from "../../../style";
 
 export const CardWrapper = styled.div`
     width: 258px;
     height: 370px;
     border-radius: 6px;
-    background: #191919;
+    background: ${COLOR.BACKGROUND_COLOR};
     padding: 20px;
 `;
 
@@ -12,6 +13,9 @@ export const CardImg = styled.img`
     width: 218px;
     height: 218px;
     object-fit: cover;
+
+    &:hover {
+    }
 `;
 
 export const CardTitle = styled.h2`
@@ -31,4 +35,12 @@ export const CardUserName = styled.h3`
     color: #9d9d9d;
     font-size: 14px;
     font-weight: bold;
+`;
+
+export const CardIconWrapper = styled.div`
+    width: 45px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `;

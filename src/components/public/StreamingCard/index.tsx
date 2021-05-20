@@ -1,5 +1,11 @@
+import { PlayButton } from "../index";
+
 function Card() {
-    return <></>;
+    return (
+        <>
+            <PlayButton callback={() => console.log("ASD")} />
+        </>
+    );
 }
 
 export default Card;
