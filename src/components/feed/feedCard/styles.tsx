@@ -5,7 +5,9 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top:80px;
+  margin-top:50px;
+  border-bottom:1px solid gray;
+  padding-bottom:30px;
   :first-of-type{
       margin-top:0;
   }
@@ -27,6 +29,7 @@ export const ProfileName = styled.span`
   color: white;
   font-size: 16px;
   margin-left: 10px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 `;
 
 export const FlexContainer = styled.div`
@@ -109,8 +112,8 @@ export const Btn = styled.button`
 padding:3px 16px;
 background:white;
 border:none;
-border-radius:24px;
-color:black;
+border-radius:2px;
+color:gray;
 font-size:12px;
 font-weight:600;
 margin-left:10px;
@@ -118,6 +121,6 @@ margin-left:10px;
     margin-left:0;
 }
 i{
-    color:black;
+    color:gray;
 }
 `
