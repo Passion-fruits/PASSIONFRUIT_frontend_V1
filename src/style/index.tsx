@@ -3,7 +3,8 @@ export const COLOR = {
     BACKGROUND_COLOR : "#1A1A1A",
     FONT_COLOR : "#A2A2A2",
     YELLOW : "#FFEE00",
-    ORANGE : "#FF8000"
+    ORANGE : "#FF8000",
+    HOVER_COLOR : "#51B3FF"
 }
 
 export const WIDTH = "1450px";

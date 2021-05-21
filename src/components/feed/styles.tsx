@@ -20,7 +20,7 @@ export const FeedWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 22%;
-  width: 60%;
+  width: 850px;
   height: 100%;
   ::-webkit-scrollbar {
     display: none;

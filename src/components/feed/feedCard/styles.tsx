@@ -5,14 +5,14 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top:50px;
-  border-bottom:1px solid rgb(70,70,70);
-  padding-bottom:30px;
-  :first-of-type{
-      margin-top:0px ;
+  margin-top: 30px;
+  border-bottom: 1px solid rgb(70, 70, 70);
+  padding-bottom: 30px;
+  :first-of-type {
+    margin-top: 0px;
   }
-  :last-of-type{
-    margin-bottom:100px;
+  :last-of-type {
+    margin-bottom: 100px;
   }
 `;
 
@@ -32,7 +32,7 @@ export const ProfileName = styled.span`
   color: white;
   font-size: 16px;
   margin-left: 10px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 `;
 
 export const FlexContainer = styled.div`
@@ -53,8 +53,8 @@ export const MusicInforContainer = styled.div`
   flex-direction: column;
   padding-left: 15px;
   box-sizing: border-box;
-  position:relative;
-  height:200px;
+  position: relative;
+  height: 200px;
 `;
 
 export const TitleWrapper = styled.div`
@@ -83,7 +83,7 @@ export const MusicDescription = styled.p`
   font-size: 15px;
   color: white;
   margin-top: 17px;
-  line-height:19px;
+  line-height: 19px;
 `;
 
 export const PlayBarContainer = styled.div`
@@ -105,27 +105,47 @@ export const PlayBtn = styled.button`
   background: ${COLOR.MAIN_COLOR};
   border: none;
   color: white;
+  transition: 0.5s;
+  &:hover {
+    background: ${COLOR.HOVER_COLOR};
+  }
 `;
 
 export const BtnContainer = styled.div`
-display:flex;
-bottom:10px;
-position:absolute;
-`
+  display: flex;
+  bottom: 10px;
+  position: absolute;
+  .Click {
+    background: ${COLOR.MAIN_COLOR};
+    color: white;
+    &:hover {
+      opacity: 1;
+      background: ${COLOR.HOVER_COLOR};
+    }
+    i {
+      color: white;
+    }
+  }
+`;
 
 export const Btn = styled.button`
-padding:3px 16px;
-background:white;
-border:none;
-border-radius:2px;
-color:gray;
-font-size:12px;
-font-weight:600;
-margin-left:10px;
-:first-of-type{
-    margin-left:0;
-}
-i{
-    color:gray;
-}
-`
+  padding: 3px 16px;
+  background: white;
+  border: none;
+  border-radius: 2px;
+  color: gray;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: 0.3s;
+  :hover {
+    opacity: 0.8;
+  }
+  :first-of-type {
+    margin-left: 0;
+  }
+  i {
+    transition: 0.3s;
+    color: gray;
+  }
+`;
