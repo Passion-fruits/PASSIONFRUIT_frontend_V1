@@ -50,12 +50,10 @@ export const CardUserName = styled.h3`
     color: #9d9d9d;
     font-size: 14px;
     font-weight: bold;
+    margin-left: 8px;
 `;
 
-export const CardIconWrapper = styled.div`
-    width: 45px;
-    height: 100%;
+export const CardUserWrapper = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
 `;
