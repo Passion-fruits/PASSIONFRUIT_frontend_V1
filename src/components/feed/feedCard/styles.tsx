@@ -22,17 +22,16 @@ export const ProfileContainer = styled.div`
 `;
 
 export const ProfileImg = styled.img`
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 80%;
   object-fit: cover;
 `;
 
 export const ProfileName = styled.span`
-  color: white;
-  font-size: 16px;
+  color: rgb(210,210,210);
+  font-size: 12px;
   margin-left: 10px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 `;
 
 export const FlexContainer = styled.div`
@@ -42,8 +41,8 @@ export const FlexContainer = styled.div`
 `;
 
 export const CoverImg = styled.img`
-  width: 190px;
-  height: 190px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
 `;
 
@@ -54,23 +53,22 @@ export const MusicInforContainer = styled.div`
   padding-left: 15px;
   box-sizing: border-box;
   position: relative;
-  height: 200px;
 `;
 
 export const TitleWrapper = styled.div`
   display: flex;
-  font-size: 24px;
+  font-size: 22px;
+  font-weight:500;  
   align-items: center;
 `;
 
 export const Genre = styled.div`
-  padding: 7px 14px;
-  background: ${COLOR.YELLOW};
-  color: black;
+  color: gray;
   font-weight: 700;
   font-size: 10px;
   border-radius: 24px;
-  margin-left: 10px;
+  padding-top:10px;
+  padding-left:10px;
 `;
 
 export const Date = styled.span`
@@ -113,8 +111,7 @@ export const PlayBtn = styled.button`
 
 export const BtnContainer = styled.div`
   display: flex;
-  bottom: 10px;
-  position: absolute;
+  margin-top:20px;
   .Click {
     background: ${COLOR.MAIN_COLOR};
     color: white;
@@ -129,14 +126,14 @@ export const BtnContainer = styled.div`
 `;
 
 export const Btn = styled.button`
-  padding: 3px 16px;
+  padding: 3px 12px;
   background: white;
   border: none;
   border-radius: 2px;
-  color: gray;
-  font-size: 12px;
+  color: black;
+  font-size: 11px;
   font-weight: 600;
-  margin-left: 10px;
+  margin-left: 13px;
   transition: 0.3s;
   :hover {
     opacity: 0.8;
@@ -146,6 +143,6 @@ export const Btn = styled.button`
   }
   i {
     transition: 0.3s;
-    color: gray;
+    color: black;
   }
 `;

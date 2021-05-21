@@ -21,11 +21,11 @@ export default function FeedCard({ name, title, profile, cover }: any) {
             {title}
             <s.Genre>#HIPHOP</s.Genre>
           </s.TitleWrapper>
-          <s.Date>2020-05-12</s.Date>
+          <s.Date>20.10.11</s.Date>
 
           {/* 노래 설명 */}
           <s.MusicDescription>
-            it's my first rap song!!it's my first rap song!!
+            it's my first rap song!!it's my t rap song!!it's my first rap song!!
           </s.MusicDescription>
 
           {/* play 바 */}
