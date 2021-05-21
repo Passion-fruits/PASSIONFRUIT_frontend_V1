@@ -9,8 +9,7 @@ export const Wrapper = styled.header`
   align-items: center;
   position:fixed;
   top:0;
-  background:rgb(10,10,10);
-  border-bottom:1px solid rgb(50,50,50);
+  background:black;
   z-index:300;
 `;
 
