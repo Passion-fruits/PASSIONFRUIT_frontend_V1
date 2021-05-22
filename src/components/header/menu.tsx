@@ -4,19 +4,19 @@ export default function Menu() {
   return (
     <s.Container>
       <s.Menu to="/home" activeClassName="active">
-        HOME<i className="fas fa-check-circle"></i>
+        Main<i className="fas fa-check-circle"></i>
       </s.Menu>
       <s.Menu exact to="/feed" activeClassName="active">
-        FEED
+        Feed
       </s.Menu>
       <s.Menu to="/chart" activeClassName="active">
-        CHART
+        Top Chart
       </s.Menu>
       <s.Menu to="/stream" activeClassName="active">
-        STREAMING<i className="fas fa-headphones"></i>
+        Streaming<i className="fas fa-headphones"></i>
       </s.Menu>
       <s.Menu to="/about" activeClassName="active">
-        ABOUT US
+        About us
       </s.Menu>
     </s.Container>
   );
