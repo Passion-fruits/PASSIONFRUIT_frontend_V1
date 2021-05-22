@@ -6,7 +6,7 @@ export default function Menu() {
       <s.Menu to="/home" activeClassName="active">
         HOME<i className="fas fa-check-circle"></i>
       </s.Menu>
-      <s.Menu exact to="/" activeClassName="active">
+      <s.Menu exact to="/feed" activeClassName="active">
         FEED
       </s.Menu>
       <s.Menu to="/chart" activeClassName="active">

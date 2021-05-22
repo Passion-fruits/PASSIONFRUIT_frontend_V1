@@ -1,4 +1,4 @@
-import { SubHeaderParams } from "../../interfaces/feed";
+import { SubHeaderParams } from "../../../interfaces/feed";
 import * as s from "./styles";
 
 export default function SubHeader({title,description}:SubHeaderParams) {

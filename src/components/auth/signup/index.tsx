@@ -1,16 +1,16 @@
 import * as s from "../styles";
-import ProfileImg from "./profileImg";
+import ProfileImg from "../../public/uploadProfile/profileImg";
 
 export default function SignUp() {
   return (
     <s.Wrapper>
       <s.Container>
-        <s.Title style={{ marginTop: "100px" }}>SIGN UP</s.Title>
+        <s.Title style={{ marginTop: "150px" }}>SIGN UP</s.Title>
         <s.SubTitle>Welcome to sign up with Passion Fruit.</s.SubTitle>
         <s.SignUpContainer>
           <s.FlexContainer>
             { /* 프로필 이미지 추가 컴포넌트 */ }
-            <ProfileImg/>
+            <ProfileImg borderRadius={80}/>
             <s.InpWrapper>
               <s.Input placeholder="Enter your E-mail" type="email" />
               <s.Input
