@@ -10,7 +10,7 @@ export default function SignUp() {
         <s.SignUpContainer>
           <s.FlexContainer>
             { /* 프로필 이미지 추가 컴포넌트 */ }
-            <ProfileImg/>
+            <ProfileImg borderRadius={80}/>
             <s.InpWrapper>
               <s.Input placeholder="Enter your E-mail" type="email" />
               <s.Input

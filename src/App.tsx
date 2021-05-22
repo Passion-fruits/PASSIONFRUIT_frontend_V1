@@ -4,6 +4,7 @@ import SignIn from "./components/auth/signin";
 import SignUp from "./components/auth/signup";
 import Feed from "./components/feed";
 import Header from "./components/header";
+import Upload from "./components/upload";
 import GlobalStyle from "./style/globalStyle";
 
 function App() {
