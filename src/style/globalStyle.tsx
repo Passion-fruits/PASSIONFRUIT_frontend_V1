@@ -10,10 +10,10 @@ const GlobalStyle = createGlobalStyle`
     body{
         background-color:black;
         padding-top:90px;
+        font-family:Arial, Helvetica, sans-serif;
     }
     *{
-        -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;  
         color:white;
     }
     a{

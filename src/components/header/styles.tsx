@@ -9,16 +9,18 @@ export const Wrapper = styled.header`
   align-items: center;
   position:fixed;
   top:0;
-  background:black;
+  border-bottom:1px solid rgb(50,50,50);
   z-index:300;
+  background:black;
 `;
 
 export const Container = styled.div`
   width: ${WIDTH};
-  padding-top: 25px;
+  padding-top: 10px;
   display: flex;
   align-items: center;
   :first-of-type {
+    margin-top:20px;
     justify-content: space-between;
   }
   .active {
@@ -74,11 +76,11 @@ export const Menu = styled(NavLink)`
   color: white;
   font-size: 13px;
   padding: 15px 0;
-  margin-left: 70px;
+  margin-left: 60px;
   position: relative;
   overflow: hidden;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 600;
+  color:rgb(210,210,210);
+  font-weight:600;
   &:first-of-type {
     margin: 0;
   }
@@ -96,7 +98,7 @@ export const Menu = styled(NavLink)`
     left: 0%;
     transition: 0.5s;
     bottom: 0;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
     left: -100%;
   }
   :hover::before {
