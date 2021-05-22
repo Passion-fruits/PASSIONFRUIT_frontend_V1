@@ -7,7 +7,7 @@ export const Wrapper = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position:sticky;
+  position:fixed;
   top:0;
   background:black;
   z-index:300;
@@ -115,7 +115,7 @@ export const FlexContainer = styled.div`
 `;
 
 export const SignBtn = styled.button`
-background-color:rgb(255,255,255,0.2);
+background-color:${COLOR.BACKGROUND_COLOR};
 border:none;
 padding: 5px 13px;
 border-radius:24px;

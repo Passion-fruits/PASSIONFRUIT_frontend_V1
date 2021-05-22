@@ -5,7 +5,7 @@ export default function SignUp() {
   return (
     <s.Wrapper>
       <s.Container>
-        <s.Title style={{ marginTop: "100px" }}>SIGN UP</s.Title>
+        <s.Title style={{ marginTop: "150px" }}>SIGN UP</s.Title>
         <s.SubTitle>Welcome to sign up with Passion Fruit.</s.SubTitle>
         <s.SignUpContainer>
           <s.FlexContainer>
