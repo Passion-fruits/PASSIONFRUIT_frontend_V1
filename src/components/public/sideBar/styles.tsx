@@ -3,7 +3,12 @@ import { COLOR } from "../../../style";
 
 export const Wrapper = styled.div`
   width: 230px;
-  position:fixed;
+  position: fixed;
+  height:800px;
+  overflow:scroll;
+  ::-webkit-scrollbar{
+    display:none;
+  }
 `;
 
 export const SelectTitle = styled.label`
@@ -13,7 +18,7 @@ export const SelectTitle = styled.label`
 `;
 
 export const SelectBox = styled.select`
-  outline:none;
+  outline: none;
   width: 100%;
   padding: 7px 25px;
   background: ${COLOR.BACKGROUND_COLOR};
@@ -21,36 +26,36 @@ export const SelectBox = styled.select`
   border-radius: 4px;
   margin-top: 10px;
   margin-bottom: 15px;
-  color:${COLOR.FONT_COLOR};
+  color: ${COLOR.FONT_COLOR};
 `;
 
-/* 선택 박스 */ 
+/* 선택 박스 */
 export const SelectContainer = styled.div`
-width:100%;
-overflow:hidden;
-padding: 12px 20px;
-background:${COLOR.BACKGROUND_COLOR};
-box-sizing:border-box;
-border-radius: 8px;
-margin-top: 10px;
-color:${COLOR.FONT_COLOR};
-font-size:13px;
-cursor:pointer;
-margin-bottom:10px;
-`
+  width: 100%;
+  overflow: hidden;
+  padding: 12px 20px;
+  background: ${COLOR.BACKGROUND_COLOR};
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-top: 10px;
+  color: ${COLOR.FONT_COLOR};
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 10px;
+`;
 
 export const OptionContainer = styled.div`
-width:100%;
-height:0px;
-overflow:hidden;
-box-sizing:border-box;
-transition:0.5s;
-display:flex;
-align-items:center;
-:hover{
-  background:rgb(10,10,10);
-}
-`
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  :hover {
+    background: rgb(10, 10, 10);
+  }
+`;
 
 export const MusicPlayerContainer = styled.div`
   width: 100%;
@@ -59,6 +64,7 @@ export const MusicPlayerContainer = styled.div`
   border-radius: 10px;
   padding: 25px;
   box-sizing: border-box;
+  margin-bottom:200px;
 `;
 
 export const ImgWrapper = styled.div`
@@ -108,11 +114,11 @@ export const ControlContainer = styled.div`
   margin-top: 20px;
   font-size: 17px;
   i {
-    transition:0.5s;
+    transition: 0.5s;
     color: ${COLOR.FONT_COLOR};
     cursor: pointer;
-    &:hover{
-        color:white;
+    &:hover {
+      color: white;
     }
   }
 `;
