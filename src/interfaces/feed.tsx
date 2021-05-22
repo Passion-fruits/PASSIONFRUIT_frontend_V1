@@ -10,3 +10,12 @@ export interface OptionParams{
     setSelectVal : any;
     nowOption : string;
 }
+
+export interface SelectParams{
+    controlDropDown : any;
+    dropDownBool : boolean;
+    arr : any[];
+    selectTitle : string;
+    title : string;
+    AllOption : any;
+}
