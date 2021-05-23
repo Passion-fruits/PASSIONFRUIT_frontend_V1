@@ -12,8 +12,10 @@ export default function FeedCard({ name, title, profile, cover }: any) {
         <s.ProfileName>{name}</s.ProfileName>
       </s.ProfileContainer>
       <s.FlexContainer>
-        <s.CoverImg src={cover} alt="" />
-
+        <s.ImgContainer>
+          <s.CoverImg src={cover} alt="" />
+          <s.CoverImgCover/>
+        </s.ImgContainer>
         {/* 노래 정보 wrapper */}
         <s.MusicInforContainer>
           {/* 노래 제목 wrapper */}
