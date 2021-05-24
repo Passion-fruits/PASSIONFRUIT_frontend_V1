@@ -33,7 +33,7 @@ export const ProfileImg = styled.img`
 `;
 
 export const ProfileName = styled.span`
-  color: rgb(210, 210, 210);
+  color: white;
   font-size: 12px;
   margin-left: 10px;
   cursor: pointer;
@@ -117,6 +117,7 @@ export const MusicDescription = styled.p`
   color: white;
   margin-top: 17px;
   line-height: 19px;
+  letter-spacing:1px;
 `;
 
 export const PlayBarContainer = styled.div`

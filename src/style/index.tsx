@@ -7,7 +7,7 @@ export const COLOR = {
     HOVER_COLOR : "#51B3FF"
 }
 
-export const WIDTH = "1450px";
+export const WIDTH = "1350px";
 
 export const TABLET_WIDTH = "1024px";
 
