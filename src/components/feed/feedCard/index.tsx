@@ -1,12 +1,40 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Sound from "./sound";
 import * as s from "./styles";
+import MUSIC_FILE from "../../../assets/audio.mp3";
 
-export default function FeedCard({ name, title, profile, cover }: any) {
+export default function FeedCard({
+  name,
+  title,
+  profile,
+  cover,
+  func,
+  nowPlay,
+}: any) {
   const [good, setGood] = useState<boolean>(false);
   const [playBool, setPlayBool] = useState<boolean>(false);
+  const PlayMusic = () => {
+    const audio: any = document.getElementById(`${name + title}`);
+    if (audio.paused) {
+      audio.play();
+      func(name + title);
+    } else {
+      audio.pause();
+    }
+    setPlayBool(!playBool);
+  };
+  useEffect(() => {
+    const audio: any = document.getElementById(`${name + title}`);
+    if (nowPlay !== audio.id) {
+      if (audio) {
+        audio.pause();
+        setPlayBool(false);
+      }
+    }
+  }, [nowPlay,name,title]);
   return (
     <s.Wrapper>
+      <audio src={MUSIC_FILE} id={name + title} />
       {/* 프로필 이미지 */}
       <s.ProfileContainer>
         <s.ProfileImg src={profile} alt="" />
@@ -15,7 +43,7 @@ export default function FeedCard({ name, title, profile, cover }: any) {
       <s.FlexContainer>
         <s.ImgContainer>
           <s.CoverImg src={cover} alt="" />
-          <s.CoverImgCover/>
+          <s.CoverImgCover />
         </s.ImgContainer>
         {/* 노래 정보 wrapper */}
         <s.MusicInforContainer>
@@ -23,7 +51,8 @@ export default function FeedCard({ name, title, profile, cover }: any) {
           <s.TitleWrapper>
             {title}
             <s.Genre>#HIPHOP</s.Genre>
-            <Sound/>
+            {/* wave 파형 */}
+            {playBool && <Sound />}
           </s.TitleWrapper>
           <s.Date>20.10.11</s.Date>
 
@@ -34,11 +63,7 @@ export default function FeedCard({ name, title, profile, cover }: any) {
 
           {/* play 바 */}
           <s.PlayBarContainer>
-            <s.PlayBtn
-              onClick={() => {
-                setPlayBool(!playBool);
-              }}
-            >
+            <s.PlayBtn onClick={PlayMusic}>
               <i className={`fas fa-${playBool ? "pause" : "play"}`} />
             </s.PlayBtn>
             <progress value="0" />

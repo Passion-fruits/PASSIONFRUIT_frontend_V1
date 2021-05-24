@@ -15,6 +15,9 @@ export const Wrapper = styled.div`
   :last-of-type {
     margin-bottom: 100px;
   }
+  audio{
+    display:none;
+  }
 `;
 
 export const ProfileContainer = styled.div`
