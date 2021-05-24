@@ -8,7 +8,7 @@ export default function Search() {
       </s.Logo> */}
       <s.SearchBar>
         <i className="fas fa-search"></i>
-        <s.SearchInput placeholder="Search on here   ex) boom bap" />
+        <s.SearchInput placeholder="Search on here you want" />
       </s.SearchBar>
     </s.FlexContainer>
   );

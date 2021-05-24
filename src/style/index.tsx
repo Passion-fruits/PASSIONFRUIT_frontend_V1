@@ -1,6 +1,6 @@
 export const COLOR = {
     MAIN_COLOR : "#0090FF",
-    BACKGROUND_COLOR : "#1A1A1A",
+    BACKGROUND_COLOR : "#1D1D1D",
     FONT_COLOR : "#A2A2A2",
     YELLOW : "#FFEE00",
     ORANGE : "#FF8000",
