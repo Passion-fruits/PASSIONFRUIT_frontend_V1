@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Sound from "./sound";
 import * as s from "./styles";
 
 export default function FeedCard({ name, title, profile, cover }: any) {
@@ -22,6 +23,7 @@ export default function FeedCard({ name, title, profile, cover }: any) {
           <s.TitleWrapper>
             {title}
             <s.Genre>#HIPHOP</s.Genre>
+            <Sound/>
           </s.TitleWrapper>
           <s.Date>20.10.11</s.Date>
 

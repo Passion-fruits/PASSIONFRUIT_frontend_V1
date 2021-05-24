@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { WaveParams } from "../../../interfaces/feed";
 import { COLOR } from "../../../style";
 
 export const Wrapper = styled.div`
@@ -104,6 +105,7 @@ export const Genre = styled.div`
   border-radius: 24px;
   padding-top: 10px;
   padding-left: 10px;
+  margin-right:10px;
 `;
 
 export const Date = styled.span`
@@ -117,7 +119,7 @@ export const MusicDescription = styled.p`
   color: white;
   margin-top: 17px;
   line-height: 19px;
-  letter-spacing:1px;
+  letter-spacing: 1px;
 `;
 
 export const PlayBarContainer = styled.div`
@@ -181,4 +183,25 @@ export const Btn = styled.button`
     transition: 0.3s;
     color: black;
   }
+`;
+
+const WaveAnim = keyframes`
+0%{
+  height:3px;
+}
+50%{
+  height:13px;
+}
+100%{
+  height:3px;
+}
+`;
+
+export const Wave = styled.div`
+  width: 1px;
+  background-color: greenyellow;
+  margin-left: 3px;
+  transition: 0.5s;
+  bottom: 0;
+  animation: ${WaveAnim} ${(e: WaveParams) => `${e.second / 10}s`} infinite;
 `;

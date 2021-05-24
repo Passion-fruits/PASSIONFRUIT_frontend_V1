@@ -19,3 +19,7 @@ export interface SelectParams{
     title : string;
     AllOption : any;
 }
+
+export interface WaveParams {
+    second: number;
+  }
