@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Sound from "./sound";
 import * as s from "./styles";
-import MUSIC_FILE from "../../../assets/audio.mp3";
+import MUSIC_FILE from "../../../assets/audio3.mp3";
 
 export default function FeedCard({
   name,
@@ -48,6 +48,11 @@ export default function FeedCard({
   const ReturnDuration = (): number => {
     const audio: any = document.getElementById(`${name + title}`);
     if (audio) {
+      if(time > audio.duration){
+        audio.pause();
+        setTime(0);
+        setPlayBool(false);
+      }
       return audio.duration;
     }
     return 0;
