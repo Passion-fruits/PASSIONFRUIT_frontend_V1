@@ -36,15 +36,14 @@ export default function FeedCard({
     }
   }, [nowPlay, name, title, playBool]);
 
+  // 플레이바 1초마다 변경
   useEffect(() => {
     if (playBool) {
-      var a = 0;
-      setInterval(() => {
-        setTime(a);
-        a++;
-      }, 1000);
+      setTimeout(()=>{
+        setTime(time + 1);
+      },1000)
     }
-  }, [playBool]);
+  }, [playBool,time]);
 
   const ReturnDuration = (): number => {
     const audio: any = document.getElementById(`${name + title}`);

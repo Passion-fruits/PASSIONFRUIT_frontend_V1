@@ -134,6 +134,7 @@ export const PlayBarContainer = styled.div`
     width: 100%;
     margin-left: 10px;
     height: 8px;
+    transition:1s;
   }
 `;
 
