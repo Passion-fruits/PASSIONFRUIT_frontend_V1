@@ -13,6 +13,8 @@ export default function FeedCard({
 }: any) {
   const [good, setGood] = useState<boolean>(false);
   const [playBool, setPlayBool] = useState<boolean>(false);
+  const [time, setTime] = useState<number>(0);
+  // 뮤직 플레이
   const PlayMusic = () => {
     const audio: any = document.getElementById(`${name + title}`);
     if (audio.paused) {
@@ -23,6 +25,7 @@ export default function FeedCard({
     }
     setPlayBool(!playBool);
   };
+  // 자기차례 아니면 재생 안 되도록
   useEffect(() => {
     const audio: any = document.getElementById(`${name + title}`);
     if (nowPlay !== audio.id) {
@@ -31,7 +34,34 @@ export default function FeedCard({
         setPlayBool(false);
       }
     }
-  }, [nowPlay,name,title]);
+  }, [nowPlay, name, title, playBool]);
+
+  useEffect(() => {
+    if (playBool) {
+      var a = 0;
+      setInterval(() => {
+        setTime(a);
+        a++;
+      }, 1000);
+    }
+  }, [playBool]);
+
+  const ReturnDuration = (): number => {
+    const audio: any = document.getElementById(`${name + title}`);
+    if (audio) {
+      return audio.duration;
+    }
+    return 0;
+  };
+
+  const ReturnValue = (): number => {
+    if (isNaN(100 * (time / ReturnDuration()))) {
+      return 0;
+    } else {
+      return 100 * (time / ReturnDuration());
+    }
+  };
+
   return (
     <s.Wrapper>
       <audio src={MUSIC_FILE} id={name + title} />
@@ -66,7 +96,7 @@ export default function FeedCard({
             <s.PlayBtn onClick={PlayMusic}>
               <i className={`fas fa-${playBool ? "pause" : "play"}`} />
             </s.PlayBtn>
-            <progress value="0" />
+            <progress value={ReturnValue()} max="100" />
           </s.PlayBarContainer>
 
           {/* 좋아요/ 댓글/ 신고 버튼 */}
