@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { WaveParams } from "../../../interfaces/feed";
+import { ProgressBarParams, WaveParams } from "../../../interfaces/feed";
 import { COLOR } from "../../../style";
 
 export const Wrapper = styled.div`
@@ -15,8 +15,8 @@ export const Wrapper = styled.div`
   :last-of-type {
     margin-bottom: 100px;
   }
-  audio{
-    display:none;
+  audio {
+    display: none;
   }
 `;
 
@@ -108,7 +108,7 @@ export const Genre = styled.div`
   border-radius: 24px;
   padding-top: 10px;
   padding-left: 10px;
-  margin-right:10px;
+  margin-right: 10px;
 `;
 
 export const Date = styled.span`
@@ -130,12 +130,29 @@ export const PlayBarContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 17px;
-  progress {
+  /*   progress {
     width: 100%;
     margin-left: 10px;
     height: 8px;
     transition:1s;
-  }
+  } */
+`;
+
+export const PlayBar = styled.div`
+  width: 100%;
+  margin-left: 10px;
+  height: 2.5px;
+  border-radius: 24px;
+  background-color: rgb(100, 100, 100);
+  overflow:hidden;
+`;
+
+export const Progress = styled.div`
+  background-color: ${COLOR.MAIN_COLOR};
+  height: 100%;
+  transform:${(e: ProgressBarParams) => `translateX(-${100-e.width}%)`};
+  width:100%;
+  transition-duration:1s;
 `;
 
 export const PlayBtn = styled.button`
