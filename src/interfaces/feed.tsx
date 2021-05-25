@@ -22,4 +22,8 @@ export interface SelectParams{
 
 export interface WaveParams {
     second: number;
-  }
+}
+
+export interface ProgressParams{
+    width:number;
+}

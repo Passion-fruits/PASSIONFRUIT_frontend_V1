@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { WaveParams } from "../../../interfaces/feed";
+import { ProgressParams, WaveParams } from "../../../interfaces/feed";
 import { COLOR } from "../../../style";
 
 export const Wrapper = styled.div`
@@ -130,13 +130,22 @@ export const PlayBarContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 17px;
-  progress {
+`;
+
+export const PlayBar = styled.div`
     width: 100%;
     margin-left: 10px;
-    height: 8px;
+    height: 2.5px;
     transition:1s;
-  }
-`;
+    border:none;
+    background-color:rgb(100,100,100);
+`
+
+export const Progress = styled.div`
+width:${(e : ProgressParams)=>e.width}%;
+height:100%;
+background-color:${COLOR.MAIN_COLOR};
+`
 
 export const PlayBtn = styled.button`
   width: 33px;

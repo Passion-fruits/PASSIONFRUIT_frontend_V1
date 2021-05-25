@@ -95,7 +95,9 @@ export default function FeedCard({
             <s.PlayBtn onClick={PlayMusic}>
               <i className={`fas fa-${playBool ? "pause" : "play"}`} />
             </s.PlayBtn>
-            <progress value={ReturnValue()} max="100" />
+            <s.PlayBar>
+              <s.Progress width={ReturnValue()} />
+            </s.PlayBar>
           </s.PlayBarContainer>
 
           {/* 좋아요/ 댓글/ 신고 버튼 */}
