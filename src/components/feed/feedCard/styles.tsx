@@ -130,8 +130,7 @@ export const PlayBarContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 17px;
-
-`
+`;
 
 export const PlayBar = styled.div`
   width: 100%;
@@ -139,14 +138,29 @@ export const PlayBar = styled.div`
   height: 2.5px;
   border-radius: 24px;
   background-color: rgb(100, 100, 100);
-  overflow:hidden;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  :hover {
+    height: 8px;
+  }
+`;
+
+export const TimeLine = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: blue;
+  opacity: 0;
+  z-index: 100;
 `;
 
 export const Progress = styled.div`
   background-color: ${COLOR.MAIN_COLOR};
   height: 100%;
-  transform:${(e: ProgressParams) => `translateX(-${100-e.width}%)`};
-  width:100%;
+  transform: ${(e: ProgressParams) => `translateX(-${100 - e.width}%)`};
+  width: 100%;
 `;
 
 export const PlayBtn = styled.button`

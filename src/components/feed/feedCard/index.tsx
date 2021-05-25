@@ -48,7 +48,8 @@ export default function FeedCard({
   const ReturnDuration = (): number => {
     const audio: any = document.getElementById(`${name + title}`);
     if (audio) {
-      if(time > audio.duration){
+      // 노래 끝나면
+      if (time > audio.duration) {
         audio.pause();
         setTime(0);
         setPlayBool(false);
@@ -63,6 +64,19 @@ export default function FeedCard({
       return 0;
     } else {
       return 100 * (time / ReturnDuration());
+    }
+  };
+
+  const TimeMove = (e: any): void => {
+    const audio: any = document.getElementById(`${name + title}`);
+    const t: HTMLElement = e.target;
+    const leftOnView = t.getBoundingClientRect().left;
+    const TimeLinePx = Math.round(e.clientX - leftOnView);
+    // 노래 클릭하면 %로 나타내는 변수
+    const TimeLine = (100 * TimeLinePx) / t.offsetWidth;
+    if (audio) {
+      audio.currentTime = Math.round((audio.duration * TimeLine) / 100);
+      setTime(Math.round((audio.duration * TimeLine) / 100));
     }
   };
 
@@ -101,6 +115,7 @@ export default function FeedCard({
               <i className={`fas fa-${playBool ? "pause" : "play"}`} />
             </s.PlayBtn>
             <s.PlayBar>
+              <s.TimeLine onClick={TimeMove} />
               <s.Progress width={ReturnValue()} />
             </s.PlayBar>
             {/*             <progress value={ReturnValue()} max="100" /> */}
