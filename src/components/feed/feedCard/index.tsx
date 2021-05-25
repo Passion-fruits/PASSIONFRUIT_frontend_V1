@@ -39,11 +39,11 @@ export default function FeedCard({
   // 플레이바 1초마다 변경
   useEffect(() => {
     if (playBool) {
-      setTimeout(()=>{
+      setTimeout(() => {
         setTime(time + 1);
-      },1000)
+      }, 1000);
     }
-  }, [playBool,time]);
+  }, [playBool, time]);
 
   const ReturnDuration = (): number => {
     const audio: any = document.getElementById(`${name + title}`);
@@ -98,6 +98,7 @@ export default function FeedCard({
             <s.PlayBar>
               <s.Progress width={ReturnValue()} />
             </s.PlayBar>
+            {/*             <progress value={ReturnValue()} max="100" /> */}
           </s.PlayBarContainer>
 
           {/* 좋아요/ 댓글/ 신고 버튼 */}
