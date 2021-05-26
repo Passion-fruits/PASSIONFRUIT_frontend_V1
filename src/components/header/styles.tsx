@@ -70,7 +70,7 @@ export const SearchInput = styled.input`
     color: ${INP_COLOR};
   }
   margin-left: 10px;
-`;
+`; 
 
 export const Menu = styled(NavLink)`
   color: white;
