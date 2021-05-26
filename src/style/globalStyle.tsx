@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     }
     body{
         background-color:black;
-        padding-top:130px;
+/*         padding-top:130px; */
         font-family:Arial, Helvetica, sans-serif;
     }
     *{
