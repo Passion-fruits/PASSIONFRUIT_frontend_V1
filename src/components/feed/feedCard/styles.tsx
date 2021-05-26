@@ -162,6 +162,7 @@ export const Progress = styled.div`
   height: 100%;
   transform: ${(e: ProgressParams) => `translateX(-${100 - e.width}%)`};
   width: 100%;
+  transition:0.3s;
 `;
 
 export const PlayBtn = styled.button`
