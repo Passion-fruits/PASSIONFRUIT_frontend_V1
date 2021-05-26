@@ -14,10 +14,12 @@ export default function FeedCard({
   const [good, setGood] = useState<boolean>(false);
   const [playBool, setPlayBool] = useState<boolean>(false);
   const [time, setTime] = useState<number>(0);
-  const [change,setChange] = useState<boolean>(false);
+  const [change, setChange] = useState<boolean>(false);
   // settimeout에서 접근 => useRef로 접근
   const changeRef = useRef(change);
+  const PlayBoolRef = useRef(playBool);
   changeRef.current = change;
+  PlayBoolRef.current = playBool;
   // 뮤직 플레이
   const PlayMusic = () => {
     const audio: any = document.getElementById(`${name + title}`);
@@ -42,15 +44,17 @@ export default function FeedCard({
 
   // 플레이바 1초마다 변경
   useEffect(() => {
-    if (playBool) {
-      setTimeout(() => {
-        if(changeRef.current){
-          setChange(false);
-          return;
-        }
-        setTime(time + 1);
-      }, 1000);
-    }
+    setTimeout(() => {
+      // useref로 접근해야됨
+      if (!PlayBoolRef.current) {
+        return;
+      }
+      if (changeRef.current) {
+        setChange(false);
+        return;
+      }
+      setTime(time + 1);
+    }, 1000);
   }, [playBool, time]);
 
   const ReturnDuration = (): number => {

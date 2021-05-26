@@ -140,10 +140,11 @@ export const PlayBar = styled.div`
   background-color: rgb(100, 100, 100);
   overflow: hidden;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.1s;
   position: relative;
   :hover {
-    height: 8px;
+    background-color: rgb(100, 100, 100, 0.5);
+    height: 7px;
   }
 `;
 
