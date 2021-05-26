@@ -7,14 +7,14 @@ import {
   SignUp,
   Feed,
   Upload,
-  Modal,
+/*   Modal, */
 } from "./components/public/index";
 
 function App() {
   return (
     <>
     <GlobalStyle />
-    <Modal/>
+{/*     <Modal/> */}
       <Router>
         <div style={{paddingTop:"130px"}}>
           <Header></Header>
