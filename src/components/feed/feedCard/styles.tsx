@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { ProgressParams, WaveParams } from "../../../interfaces/feed";
 import { COLOR } from "../../../style";
 
 export const Wrapper = styled.div`
@@ -13,6 +14,9 @@ export const Wrapper = styled.div`
   }
   :last-of-type {
     margin-bottom: 100px;
+  }
+  audio {
+    display: none;
   }
 `;
 
@@ -104,6 +108,7 @@ export const Genre = styled.div`
   border-radius: 24px;
   padding-top: 10px;
   padding-left: 10px;
+  margin-right: 10px;
 `;
 
 export const Date = styled.span`
@@ -117,7 +122,7 @@ export const MusicDescription = styled.p`
   color: white;
   margin-top: 17px;
   line-height: 19px;
-  letter-spacing:1px;
+  letter-spacing: 1px;
 `;
 
 export const PlayBarContainer = styled.div`
@@ -125,11 +130,39 @@ export const PlayBarContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 17px;
-  progress {
-    width: 100%;
-    margin-left: 10px;
-    height: 8px;
+`;
+
+export const PlayBar = styled.div`
+  width: 100%;
+  margin-left: 10px;
+  height: 2.5px;
+  border-radius: 24px;
+  background-color: rgb(100, 100, 100);
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.1s;
+  position: relative;
+  :hover {
+    background-color: rgb(100, 100, 100, 0.5);
+    height: 7px;
   }
+`;
+
+export const TimeLine = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: blue;
+  opacity: 0;
+  z-index: 100;
+`;
+
+export const Progress = styled.div`
+  background-color: ${COLOR.MAIN_COLOR};
+  height: 100%;
+  transform: ${(e: ProgressParams) => `translateX(-${100 - e.width}%)`};
+  width: 100%;
+  transition:0.3s;
 `;
 
 export const PlayBtn = styled.button`
@@ -181,4 +214,25 @@ export const Btn = styled.button`
     transition: 0.3s;
     color: black;
   }
+`;
+
+const WaveAnim = keyframes`
+0%{
+  height:3px;
+}
+50%{
+  height:13px;
+}
+100%{
+  height:3px;
+}
+`;
+
+export const Wave = styled.div`
+  width: 1px;
+  background-color: greenyellow;
+  margin-left: 3px;
+  transition: 0.5s;
+  bottom: 0;
+  animation: ${WaveAnim} ${(e: WaveParams) => `${e.second / 10}s`} infinite;
 `;
