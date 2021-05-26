@@ -10,3 +10,20 @@ export interface OptionParams{
     setSelectVal : any;
     nowOption : string;
 }
+
+export interface SelectParams{
+    controlDropDown : any;
+    dropDownBool : boolean;
+    arr : any[];
+    selectTitle : string;
+    title : string;
+    AllOption : any;
+}
+
+export interface WaveParams {
+    second: number;
+}
+
+export interface ProgressParams{
+    width:number;
+}

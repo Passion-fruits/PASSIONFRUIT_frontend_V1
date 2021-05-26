@@ -4,17 +4,17 @@ import { COLOR } from "../../../style";
 export const Wrapper = styled.div`
   width: 230px;
   position: fixed;
-  height:800px;
-  overflow:scroll;
-  ::-webkit-scrollbar{
-    display:none;
+  height: 800px;
+  overflow: scroll;
+  ::-webkit-scrollbar {
+    display: none;
   }
 `;
 
 export const SelectTitle = styled.label`
   color: white;
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 600;
 `;
 
 export const SelectBox = styled.select`
@@ -25,29 +25,50 @@ export const SelectBox = styled.select`
   border: none;
   border-radius: 4px;
   margin-top: 10px;
-  margin-bottom: 15px;
   color: ${COLOR.FONT_COLOR};
 `;
 
 /* 선택 박스 */
 export const SelectContainer = styled.div`
   width: 100%;
+  height: 35px;
   overflow: hidden;
-  padding: 12px 20px;
   background: ${COLOR.BACKGROUND_COLOR};
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: 5px;
   margin-top: 10px;
-  color: ${COLOR.FONT_COLOR};
   font-size: 13px;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+  transition: 0.5s;
+`;
+
+export const SelectVal = styled.div`
+  width: 100%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: 0.3s;
+  * {
+    transition: 0.5s;
+    color: ${COLOR.FONT_COLOR};
+  }
+  span {
+    margin-left: 20px;
+  }
+  i {
+    position: absolute;
+    right: 20px;
+  }
+  :hover {
+    background: rgb(50, 50, 50);
+  }
 `;
 
 export const OptionContainer = styled.div`
   width: 100%;
-  height: 0px;
-  overflow: hidden;
+  height: 40px;
   box-sizing: border-box;
   transition: 0.5s;
   display: flex;
@@ -64,7 +85,7 @@ export const MusicPlayerContainer = styled.div`
   border-radius: 10px;
   padding: 25px;
   box-sizing: border-box;
-  margin-bottom:200px;
+  margin-bottom: 200px;
 `;
 
 export const ImgWrapper = styled.div`

@@ -20,7 +20,7 @@ export const Title = styled.h1`
   color: white;
   font-size: 30px;
   font-weight: Bold;
-  margin-top: 170px;
+  margin-top: 140px;
 `;
 
 export const SubTitle = styled.p`
@@ -98,8 +98,8 @@ export const ProfileImg = styled.img`
   height: 180px;
   border-radius: 80%;
   cursor: pointer;
-  object-fit:cover;
-  border:2px solid rgb(25,25,25);
+  object-fit: cover;
+  border: 2px solid rgb(25, 25, 25);
 `;
 
 export const FlexContainer = styled.div`
@@ -130,10 +130,12 @@ export const Square = styled.div`
 `;
 
 export const CheckContainer = styled.div`
-float:right;
-margin-top:30px;
-display:flex;
-justify-content:flex-end;
-font-size:12px;
-span{color:gray}
-`
+  float: right;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  span {
+    color: gray;
+  }
+`;

@@ -1,19 +1,20 @@
 import { useState } from "react";
 import { GenreArr, SortArr } from "../../../utils/export";
 import Option from "./optionContainer";
+import Select from "./selectContainer";
 import * as s from "./styles";
 
 export default function SideBar() {
   const [dropDown, setDropDown] = useState<boolean>(false);
   const [genre, setGenre] = useState<string>(GenreArr[0]);
-  const [sort,setSort] = useState<string>(SortArr[0]);
+  const [sort, setSort] = useState<string>(SortArr[0]);
   const [sortDropDown, setSortDropDown] = useState<boolean>(false);
-  const OptionDropDown=()=> {
+  const OptionDropDown = () => {
     setDropDown(!dropDown);
-  }
-  const SortDropDown=()=>{
+  };
+  const SortDropDown = () => {
     setSortDropDown(!sortDropDown);
-  }
+  };
   const AllOption = GenreArr.map((e: string, index: number) => {
     return (
       <Option
@@ -40,18 +41,22 @@ export default function SideBar() {
   });
   return (
     <s.Wrapper>
-      <s.SelectTitle>genre</s.SelectTitle>
-      <s.SelectContainer onClick={OptionDropDown}>
-        {genre}
-        {AllOption}
-      </s.SelectContainer>
-
-      <s.SelectTitle>sort</s.SelectTitle>
-      <s.SelectContainer onClick={SortDropDown}>
-        {sort}
-        {AllSortOption}
-      </s.SelectContainer>
-
+      <Select
+        title="genre"
+        controlDropDown={OptionDropDown}
+        dropDownBool={dropDown}
+        arr={GenreArr}
+        selectTitle={genre}
+        AllOption={AllOption}
+      />
+      <Select
+        title="sort"
+        controlDropDown={SortDropDown}
+        dropDownBool={sortDropDown}
+        arr={SortArr}
+        selectTitle={sort}
+        AllOption={AllSortOption}
+      />
       <s.MusicPlayerContainer>
         <s.ImgWrapper>
           <s.CoverImg src="https://mblogthumb-phinf.pstatic.net/MjAxODA4MTdfMjEy/MDAxNTM0NDg5OTAxMjUz.Dun-ieIhspxPwMv7pGacLr0D7nSwkar-YHXwGGbEeUMg.H_WaFBvPsxWqGI7NYOoMtwVjALYX4WyS_fusbuInx78g.JPEG.math7wine/1534489899443.jpg?type=w800" />

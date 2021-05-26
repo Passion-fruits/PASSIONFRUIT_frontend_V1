@@ -7,18 +7,20 @@ export const Wrapper = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position:fixed;
-  top:0;
-  background:black;
-  z-index:300;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid rgb(50, 50, 50);
+  z-index: 300;
+  background: rgb(5,5,5);
 `;
 
 export const Container = styled.div`
   width: ${WIDTH};
-  padding-top: 25px;
+  padding-top: 10px;
   display: flex;
   align-items: center;
   :first-of-type {
+    margin-top: 20px;
     justify-content: space-between;
   }
   .active {
@@ -41,10 +43,10 @@ export const Logo = styled.span`
 `;
 
 export const SearchBar = styled.div`
-  width: 300px;
+  width: 500px;
   height: 35px;
-  background-color: #191919;
-  margin-left: 30px;
+  background-color: ${COLOR.BACKGROUND_COLOR};
+  margin-left: 10px;
   border-radius: 24px;
   padding: 0 20px;
   box-sizing: border-box;
@@ -74,11 +76,11 @@ export const Menu = styled(NavLink)`
   color: white;
   font-size: 13px;
   padding: 15px 0;
-  margin-left: 70px;
+  margin-left: 45px;
   position: relative;
   overflow: hidden;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
+  color: rgb(230, 220, 200);
   &:first-of-type {
     margin: 0;
   }
@@ -96,7 +98,7 @@ export const Menu = styled(NavLink)`
     left: 0%;
     transition: 0.5s;
     bottom: 0;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
     left: -100%;
   }
   :hover::before {
@@ -115,19 +117,20 @@ export const FlexContainer = styled.div`
 `;
 
 export const SignBtn = styled.button`
-background-color:${COLOR.BACKGROUND_COLOR};
-border:none;
-padding: 5px 13px;
-border-radius:24px;
-font-weight:bold;
-font-size:13px;
-transition:0.3s;
-:first-of-type{
-    background-color:${COLOR.YELLOW};
-    color:black;
-    margin-right:10px;
-}
-:hover{
-    opacity:0.8;
-}
-`
+  background-color: ${COLOR.BACKGROUND_COLOR};
+  border: none;
+  padding: 5px 13px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: 0.3s;
+  color:${COLOR.FONT_COLOR};
+  :first-of-type {
+    background-color: ${COLOR.YELLOW};
+    color: black;
+    margin-right: 10px;
+  }
+  :hover {
+    opacity: 0.8;
+  }
+`;

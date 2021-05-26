@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 40px;
 `;
 
 export const Container = styled.div`

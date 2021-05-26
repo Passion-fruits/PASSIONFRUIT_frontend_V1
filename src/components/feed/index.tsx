@@ -1,3 +1,4 @@
+import { useState } from "react";
 import SideBar from "../public/sideBar";
 import FeedCard from "./feedCard";
 import Recommend from "./recommend";
@@ -28,6 +29,10 @@ export default function Feed() {
       cover: "https://i1.sndcdn.com/artworks-6yNLdldkxG5U-0-t500x500.jpg",
     },
   ];
+  const [Index,setIndex] = useState<string | null>(null);
+  const PlayIndexCheck=(e : string)=>{
+    setIndex(e);
+  }
   return (
     <s.Wrapper>
       <s.Container>
@@ -43,24 +48,8 @@ export default function Feed() {
               title={e.title}
               profile={e.profile}
               cover={e.cover}
-            />
-          ))}
-          {Arr.map((e: any, index: number) => (
-            <FeedCard
-              key={index}
-              name={e.name}
-              title={e.title}
-              profile={e.profile}
-              cover={e.cover}
-            />
-          ))}
-          {Arr.map((e: any, index: number) => (
-            <FeedCard
-              key={index}
-              name={e.name}
-              title={e.title}
-              profile={e.profile}
-              cover={e.cover}
+              func={PlayIndexCheck}
+              nowPlay={Index}
             />
           ))}
         </s.FeedWrapper>
