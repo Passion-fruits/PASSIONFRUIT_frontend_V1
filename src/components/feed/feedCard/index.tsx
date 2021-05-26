@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Sound from "./sound";
 import * as s from "./styles";
-import MUSIC_FILE from "../../../assets/audio3.mp3";
+import MUSIC_FILE from "../../../assets/audio4.mp3";
 
 export default function FeedCard({
   name,
@@ -14,6 +14,10 @@ export default function FeedCard({
   const [good, setGood] = useState<boolean>(false);
   const [playBool, setPlayBool] = useState<boolean>(false);
   const [time, setTime] = useState<number>(0);
+  const [change,setChange] = useState<boolean>(false);
+  // settimeout에서 접근 => useRef로 접근
+  const changeRef = useRef(change);
+  changeRef.current = change;
   // 뮤직 플레이
   const PlayMusic = () => {
     const audio: any = document.getElementById(`${name + title}`);
@@ -40,6 +44,10 @@ export default function FeedCard({
   useEffect(() => {
     if (playBool) {
       setTimeout(() => {
+        if(changeRef.current){
+          setChange(false);
+          return;
+        }
         setTime(time + 1);
       }, 1000);
     }
@@ -75,6 +83,7 @@ export default function FeedCard({
     // 노래 클릭하면 %로 나타내는 변수
     const TimeLine = (100 * TimeLinePx) / t.offsetWidth;
     if (audio) {
+      setChange(true);
       audio.currentTime = Math.round((audio.duration * TimeLine) / 100);
       setTime(Math.round((audio.duration * TimeLine) / 100));
     }
