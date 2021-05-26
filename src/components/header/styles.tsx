@@ -80,7 +80,7 @@ export const Menu = styled(NavLink)`
   position: relative;
   overflow: hidden;
   font-weight: 600;
-  color: rgb(230, 220, 200);
+  color: rgb(220, 220, 220);
   &:first-of-type {
     margin: 0;
   }
