@@ -135,15 +135,14 @@ export const PlayBarContainer = styled.div`
 export const PlayBar = styled.div`
   width: 100%;
   margin-left: 10px;
-  height: 2.5px;
+  height: 3px;
   border-radius: 24px;
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(100, 100, 100,0.6);
   overflow: hidden;
   cursor: pointer;
-  transition: 0.1s;
   position: relative;
+  transition:0.2s;
   :hover {
-    background-color: rgb(100, 100, 100, 0.5);
     height: 7px;
   }
 `;
@@ -162,7 +161,6 @@ export const Progress = styled.div`
   height: 100%;
   transform: ${(e: ProgressParams) => `translateX(-${100 - e.width}%)`};
   width: 100%;
-  transition:0.3s;
 `;
 
 export const PlayBtn = styled.button`
