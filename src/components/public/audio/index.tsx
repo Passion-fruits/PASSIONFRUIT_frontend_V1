@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
+import { PlayBarProps } from "../../../interfaces/audio";
 import * as s from "./styles";
 
-export default function PlayBarComponent({ id, nowPlay, play, Music }: any) {
+export default function PlayBarComponent({ id, nowPlay, play, Music }: PlayBarProps) {
   const [playBool, setPlayBool] = useState<boolean>(false);
   const [time, setTime] = useState<number>(0);
   const [change, setChange] = useState<boolean>(false);
