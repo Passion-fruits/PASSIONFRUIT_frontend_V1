@@ -137,11 +137,11 @@ export const PlayBar = styled.div`
   margin-left: 10px;
   height: 3px;
   border-radius: 24px;
-  background-color: rgb(100, 100, 100,0.6);
+  background-color: rgb(100, 100, 100, 0.6);
   overflow: hidden;
   cursor: pointer;
   position: relative;
-  transition:0.2s;
+  transition: 0.2s;
   :hover {
     height: 7px;
   }
@@ -171,6 +171,7 @@ export const PlayBtn = styled.button`
   border: none;
   color: white;
   transition: 0.5s;
+  margin-right: 10px;
   &:hover {
     background: ${COLOR.HOVER_COLOR};
   }
